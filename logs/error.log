@@ -1,0 +1,2 @@
+2025-09-04 18:03:36:336 [31merror[39m: [31mGET /api/products/category/infantil 500 932ms - IP: ::1[39m
+2025-09-04 22:19:20:1920 [31merror[39m: [31mPOST /api/auth/login 500 10038ms - IP: ::1[39m

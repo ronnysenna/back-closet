@@ -1,0 +1,319 @@
+2025-09-04 16:36:44:3644 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:36:52:3652 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:37:50:3750 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:37:51:3751 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:38:08:388 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:38:08:388 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:38:25:3825 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:49:04:494 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 16:49:09:499 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:11:58:1158 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:37:53:3753 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:38:57:3857 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:39:14:3914 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:39:20:3920 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:39:41:3941 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:40:22:4022 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:41:04:414 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:41:48:4148 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:42:14:4214 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:42:16:4216 [35mhttp[39m: [35mGET /api/health 200 3ms - IP: ::1[39m
+2025-09-04 17:42:36:4236 [35mhttp[39m: [35mPOST /api/auth/login 200 516ms - IP: ::1[39m
+2025-09-04 17:43:16:4316 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:43:16:4316 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:43:43:4343 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:43:56:4356 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:45:24:4524 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:18:4818 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:18:4818 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:30:4830 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:30:4830 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:40:4840 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:40:4840 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:42:4842 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 17:48:57:4857 [33mwarn[39m: [33mPOST /auth/login 404 2ms - IP: ::1[39m
+2025-09-04 17:49:19:4919 [35mhttp[39m: [35mPOST /api/auth/login 200 717ms - IP: ::1[39m
+2025-09-04 17:52:02:522 [33mwarn[39m: [33mPOST /auth/login 404 3ms - IP: ::1[39m
+2025-09-04 17:55:48:5548 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:02:20:220 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:03:12:312 [33mwarn[39m: [33mGET /products/category/infantil 404 4ms - IP: ::1[39m
+2025-09-04 18:03:36:336 [31merror[39m: [31mGET /api/products/category/infantil 500 932ms - IP: ::1[39m
+2025-09-04 18:08:33:833 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:09:03:93 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:11:52:1152 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:12:24:1224 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:12:45:1245 [35mhttp[39m: [35mGET /api/products/category/infantil 200 924ms - IP: ::1[39m
+2025-09-04 18:13:17:1317 [35mhttp[39m: [35mGET /api/products/category/infantil 200 362ms - IP: ::1[39m
+2025-09-04 18:13:17:1317 [35mhttp[39m: [35mGET /api/products/category/infantil 304 290ms - IP: ::1[39m
+2025-09-04 18:13:24:1324 [35mhttp[39m: [35mGET /api/categories 200 113ms - IP: ::1[39m
+2025-09-04 18:13:24:1324 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 18:13:25:1325 [35mhttp[39m: [35mGET /api/products/featured 200 394ms - IP: ::1[39m
+2025-09-04 18:13:25:1325 [35mhttp[39m: [35mGET /api/products/featured 304 54ms - IP: ::1[39m
+2025-09-04 18:13:25:1325 [35mhttp[39m: [35mGET /api/products 200 743ms - IP: ::1[39m
+2025-09-04 18:13:25:1325 [35mhttp[39m: [35mGET /api/products 304 233ms - IP: ::1[39m
+2025-09-04 18:13:47:1347 [33mwarn[39m: [33mPOST /api/auth/login 401 287ms - IP: ::1[39m
+2025-09-04 18:14:15:1415 [35mhttp[39m: [35mPOST /api/auth/login 200 248ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/categories 304 121ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/products/featured 304 124ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/categories 304 113ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/products/featured 304 114ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/products 304 543ms - IP: ::1[39m
+2025-09-04 18:14:16:1416 [35mhttp[39m: [35mGET /api/products 304 251ms - IP: ::1[39m
+2025-09-04 18:14:31:1431 [35mhttp[39m: [35mGET /api/products/category/americano 200 862ms - IP: ::1[39m
+2025-09-04 18:14:31:1431 [35mhttp[39m: [35mGET /api/products/category/americano 304 343ms - IP: ::1[39m
+2025-09-04 18:14:41:1441 [35mhttp[39m: [35mGET /api/products/id/14 200 289ms - IP: ::1[39m
+2025-09-04 18:14:41:1441 [35mhttp[39m: [35mGET /api/products/id/14 304 229ms - IP: ::1[39m
+2025-09-04 18:14:44:1444 [35mhttp[39m: [35mGET /api/products/featured 304 110ms - IP: ::1[39m
+2025-09-04 18:14:44:1444 [35mhttp[39m: [35mGET /api/categories 304 113ms - IP: ::1[39m
+2025-09-04 18:14:44:1444 [35mhttp[39m: [35mGET /api/products/featured 304 57ms - IP: ::1[39m
+2025-09-04 18:14:44:1444 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 18:14:44:1444 [35mhttp[39m: [35mGET /api/products 304 287ms - IP: ::1[39m
+2025-09-04 18:14:45:1445 [35mhttp[39m: [35mGET /api/products 304 233ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [35mhttp[39m: [35mGET /api/categories 304 201ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [35mhttp[39m: [35mGET /api/products/featured 304 200ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 18:18:11:1811 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 18:18:12:1812 [35mhttp[39m: [35mGET /api/products 304 784ms - IP: ::1[39m
+2025-09-04 18:18:12:1812 [35mhttp[39m: [35mGET /api/products 304 231ms - IP: ::1[39m
+2025-09-04 18:20:52:2052 [35mhttp[39m: [35mGET /api/categories 304 189ms - IP: ::1[39m
+2025-09-04 18:20:52:2052 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 18:20:52:2052 [35mhttp[39m: [35mGET /api/products/featured 304 398ms - IP: ::1[39m
+2025-09-04 18:20:52:2052 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 18:20:53:2053 [35mhttp[39m: [35mGET /api/products 304 758ms - IP: ::1[39m
+2025-09-04 18:20:53:2053 [35mhttp[39m: [35mGET /api/products 304 263ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/products/featured 304 119ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/products/featured 304 65ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/categories 304 187ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/categories 304 63ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/products 304 343ms - IP: ::1[39m
+2025-09-04 18:21:41:2141 [35mhttp[39m: [35mGET /api/products 304 257ms - IP: ::1[39m
+2025-09-04 18:24:35:2435 [35mhttp[39m: [35mGET /api/products/featured 304 217ms - IP: ::1[39m
+2025-09-04 18:24:35:2435 [35mhttp[39m: [35mGET /api/products/featured 304 55ms - IP: ::1[39m
+2025-09-04 18:24:35:2435 [35mhttp[39m: [35mGET /api/categories 304 408ms - IP: ::1[39m
+2025-09-04 18:24:35:2435 [35mhttp[39m: [35mGET /api/categories 304 57ms - IP: ::1[39m
+2025-09-04 18:24:35:2435 [35mhttp[39m: [35mGET /api/products 304 568ms - IP: ::1[39m
+2025-09-04 18:24:36:2436 [35mhttp[39m: [35mGET /api/products 304 243ms - IP: ::1[39m
+2025-09-04 18:24:37:2437 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/categories 304 176ms - IP: ::1[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/products/featured 304 177ms - IP: ::1[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/products 304 288ms - IP: ::1[39m
+2025-09-04 18:25:27:2527 [35mhttp[39m: [35mGET /api/products 304 258ms - IP: ::1[39m
+2025-09-04 18:25:42:2542 [35mhttp[39m: [35mPOST /api/auth/login 200 314ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/categories 304 124ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/products/featured 304 126ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/products/featured 304 59ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/categories 304 60ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/products 304 247ms - IP: ::1[39m
+2025-09-04 18:25:43:2543 [35mhttp[39m: [35mGET /api/products 304 263ms - IP: ::1[39m
+2025-09-04 18:26:28:2628 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 18:26:28:2628 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mPOST /api/auth/login 200 515ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mGET /api/products/featured 304 119ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mGET /api/products/featured 304 57ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mGET /api/categories 304 389ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mGET /api/categories 304 58ms - IP: ::1[39m
+2025-09-04 18:26:44:2644 [35mhttp[39m: [35mGET /api/products 304 568ms - IP: ::1[39m
+2025-09-04 18:26:45:2645 [35mhttp[39m: [35mGET /api/products 304 237ms - IP: ::1[39m
+2025-09-04 18:27:46:2746 [35mhttp[39m: [35mGET /api/categories 304 122ms - IP: ::1[39m
+2025-09-04 18:27:46:2746 [35mhttp[39m: [35mGET /api/categories 304 65ms - IP: ::1[39m
+2025-09-04 18:27:47:2747 [35mhttp[39m: [35mGET /api/products 304 330ms - IP: ::1[39m
+2025-09-04 18:27:47:2747 [35mhttp[39m: [35mGET /api/products 304 249ms - IP: ::1[39m
+2025-09-04 18:28:07:287 [35mhttp[39m: [35mGET /api/categories 304 119ms - IP: ::1[39m
+2025-09-04 18:28:07:287 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 18:28:14:2814 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 18:28:14:2814 [35mhttp[39m: [35mGET /api/categories 304 61ms - IP: ::1[39m
+2025-09-04 18:28:15:2815 [35mhttp[39m: [35mGET /api/products 304 547ms - IP: ::1[39m
+2025-09-04 18:28:15:2815 [35mhttp[39m: [35mGET /api/products 304 274ms - IP: ::1[39m
+2025-09-04 18:28:42:2842 [35mhttp[39m: [35mGET /api/categories 304 114ms - IP: ::1[39m
+2025-09-04 18:28:42:2842 [35mhttp[39m: [35mGET /api/products 304 436ms - IP: ::1[39m
+2025-09-04 18:29:57:2957 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:30:36:3036 [35mhttp[39m: [35mGET /api/categories 304 115ms - IP: ::1[39m
+2025-09-04 18:30:36:3036 [35mhttp[39m: [35mGET /api/categories 304 69ms - IP: ::1[39m
+2025-09-04 18:30:38:3038 [35mhttp[39m: [35mGET /api/categories 304 65ms - IP: ::1[39m
+2025-09-04 18:30:38:3038 [35mhttp[39m: [35mGET /api/categories 304 73ms - IP: ::1[39m
+2025-09-04 18:30:38:3038 [35mhttp[39m: [35mGET /api/products 304 744ms - IP: ::1[39m
+2025-09-04 18:30:38:3038 [35mhttp[39m: [35mGET /api/products 304 243ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [35mhttp[39m: [35mGET /api/categories 304 181ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [35mhttp[39m: [35mGET /api/categories 304 67ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [35mhttp[39m: [35mGET /api/products/featured 304 382ms - IP: ::1[39m
+2025-09-04 18:32:01:321 [35mhttp[39m: [35mGET /api/products/featured 304 60ms - IP: ::1[39m
+2025-09-04 18:32:02:322 [35mhttp[39m: [35mGET /api/products 304 1155ms - IP: ::1[39m
+2025-09-04 18:32:02:322 [35mhttp[39m: [35mGET /api/products 304 239ms - IP: ::1[39m
+2025-09-04 18:32:02:322 [35mhttp[39m: [35mGET /api/products/category/babydoll 200 590ms - IP: ::1[39m
+2025-09-04 18:32:03:323 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 291ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/products/featured 304 170ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/categories 304 171ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/products 304 281ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/categories 304 110ms - IP: ::1[39m
+2025-09-04 18:32:37:3237 [35mhttp[39m: [35mGET /api/products 304 229ms - IP: ::1[39m
+2025-09-04 18:32:42:3242 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 564ms - IP: ::1[39m
+2025-09-04 18:32:42:3242 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 302ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mPOST /api/auth/login 200 331ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mGET /api/products/featured 304 65ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mGET /api/products/featured 304 81ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mGET /api/categories 304 148ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mGET /api/categories 304 57ms - IP: ::1[39m
+2025-09-04 18:33:00:330 [35mhttp[39m: [35mGET /api/products 304 656ms - IP: ::1[39m
+2025-09-04 18:33:01:331 [35mhttp[39m: [35mGET /api/products 304 280ms - IP: ::1[39m
+2025-09-04 18:33:06:336 [35mhttp[39m: [35mGET /api/categories 304 67ms - IP: ::1[39m
+2025-09-04 18:33:06:336 [35mhttp[39m: [35mGET /api/categories 304 65ms - IP: ::1[39m
+2025-09-04 18:33:06:336 [35mhttp[39m: [35mGET /api/products 304 258ms - IP: ::1[39m
+2025-09-04 18:33:07:337 [35mhttp[39m: [35mGET /api/products 304 240ms - IP: ::1[39m
+2025-09-04 18:35:33:3533 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:35:33:3533 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:35:33:3533 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 18:35:33:3533 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 18:35:33:3533 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 347ms - IP: ::1[39m
+2025-09-04 18:35:34:3534 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 285ms - IP: ::1[39m
+2025-09-04 18:35:51:3551 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 345ms - IP: ::1[39m
+2025-09-04 18:35:51:3551 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 298ms - IP: ::1[39m
+2025-09-04 18:38:15:3815 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 987ms - IP: ::1[39m
+2025-09-04 18:38:16:3816 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 303ms - IP: ::1[39m
+2025-09-04 18:45:46:4546 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:46:57:4657 [35mhttp[39m: [35mPOST /api/auth/login 200 3385ms - IP: ::1[39m
+2025-09-04 18:46:57:4657 [35mhttp[39m: [35mGET /api/products/featured 304 116ms - IP: ::1[39m
+2025-09-04 18:46:57:4657 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 18:46:58:4658 [35mhttp[39m: [35mGET /api/categories 304 737ms - IP: ::1[39m
+2025-09-04 18:46:58:4658 [35mhttp[39m: [35mGET /api/categories 304 72ms - IP: ::1[39m
+2025-09-04 18:46:58:4658 [35mhttp[39m: [35mGET /api/products 304 1103ms - IP: ::1[39m
+2025-09-04 18:46:59:4659 [35mhttp[39m: [35mGET /api/products 304 232ms - IP: ::1[39m
+2025-09-04 18:47:04:474 [35mhttp[39m: [35mGET /api/categories 304 67ms - IP: ::1[39m
+2025-09-04 18:47:04:474 [35mhttp[39m: [35mGET /api/categories 304 66ms - IP: ::1[39m
+2025-09-04 18:47:04:474 [35mhttp[39m: [35mGET /api/products 304 244ms - IP: ::1[39m
+2025-09-04 18:47:04:474 [35mhttp[39m: [35mGET /api/products 304 239ms - IP: ::1[39m
+2025-09-04 18:48:00:480 [33mwarn[39m: [33mGET /api/auth/profile 404 3ms - IP: ::1[39m
+2025-09-04 18:48:00:480 [33mwarn[39m: [33mGET /api/auth/profile 404 0ms - IP: ::1[39m
+2025-09-04 18:48:01:481 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 634ms - IP: ::1[39m
+2025-09-04 18:48:01:481 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 304ms - IP: ::1[39m
+2025-09-04 18:49:50:4950 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 367ms - IP: ::1[39m
+2025-09-04 18:49:51:4951 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 291ms - IP: ::1[39m
+2025-09-04 18:50:33:5033 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:51:11:5111 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:51:23:5123 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:52:47:5247 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 18:52:58:5258 [35mhttp[39m: [35mPOST /api/auth/login 200 528ms - IP: ::1[39m
+2025-09-04 18:52:58:5258 [35mhttp[39m: [35mGET /api/categories 304 123ms - IP: ::1[39m
+2025-09-04 18:52:58:5258 [35mhttp[39m: [35mGET /api/categories 304 64ms - IP: ::1[39m
+2025-09-04 18:52:58:5258 [35mhttp[39m: [35mGET /api/products/featured 304 367ms - IP: ::1[39m
+2025-09-04 18:52:58:5258 [35mhttp[39m: [35mGET /api/products/featured 304 57ms - IP: ::1[39m
+2025-09-04 18:52:59:5259 [35mhttp[39m: [35mGET /api/products 304 733ms - IP: ::1[39m
+2025-09-04 18:52:59:5259 [35mhttp[39m: [35mGET /api/products 304 229ms - IP: ::1[39m
+2025-09-04 18:53:06:536 [35mhttp[39m: [35mGET /api/categories 304 116ms - IP: ::1[39m
+2025-09-04 18:53:06:536 [35mhttp[39m: [35mGET /api/categories 304 68ms - IP: ::1[39m
+2025-09-04 18:53:06:536 [35mhttp[39m: [35mGET /api/products 304 248ms - IP: ::1[39m
+2025-09-04 18:53:06:536 [35mhttp[39m: [35mGET /api/products 304 248ms - IP: ::1[39m
+2025-09-04 18:53:51:5351 [35mhttp[39m: [35mPOST /api/upload/product-image 201 9ms - IP: ::1[39m
+2025-09-04 18:54:23:5423 [35mhttp[39m: [35mPOST /api/upload/product-image 201 3ms - IP: ::1[39m
+2025-09-04 18:54:39:5439 [35mhttp[39m: [35mPOST /api/upload/product-image 201 2ms - IP: ::1[39m
+2025-09-04 18:59:19:5919 [35mhttp[39m: [35mGET /api/categories 304 427ms - IP: ::1[39m
+2025-09-04 18:59:19:5919 [35mhttp[39m: [35mGET /api/products 304 811ms - IP: ::1[39m
+2025-09-04 19:00:41:041 [35mhttp[39m: [35mPUT /api/products/id/1 200 968ms - IP: ::1[39m
+2025-09-04 19:00:41:041 [35mhttp[39m: [35mGET /api/products 200 264ms - IP: ::1[39m
+2025-09-04 19:01:04:14 [35mhttp[39m: [35mPOST /api/upload/product-image 201 3ms - IP: ::1[39m
+2025-09-04 19:01:25:125 [35mhttp[39m: [35mGET /api/products 304 330ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/categories 304 169ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/products/featured 304 214ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/categories 304 57ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/products/featured 304 71ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/products 304 820ms - IP: ::1[39m
+2025-09-04 19:02:30:230 [35mhttp[39m: [35mGET /api/products 304 233ms - IP: ::1[39m
+2025-09-04 19:02:33:233 [35mhttp[39m: [35mGET /api/categories 304 63ms - IP: ::1[39m
+2025-09-04 19:02:33:233 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 19:02:33:233 [35mhttp[39m: [35mGET /api/products 304 236ms - IP: ::1[39m
+2025-09-04 19:02:33:233 [35mhttp[39m: [35mGET /api/products 304 231ms - IP: ::1[39m
+2025-09-04 19:02:42:242 [35mhttp[39m: [35mPOST /api/upload/product-image 201 3ms - IP: ::1[39m
+2025-09-04 19:36:15:3615 [33mwarn[39m: [33mGET /api/auth/profile 404 33ms - IP: ::1[39m
+2025-09-04 19:36:15:3615 [33mwarn[39m: [33mGET /api/auth/profile 404 2ms - IP: ::1[39m
+2025-09-04 19:36:15:3615 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 19:36:15:3615 [33mwarn[39m: [33mGET /api/auth/profile 404 3ms - IP: ::1[39m
+2025-09-04 19:36:16:3616 [35mhttp[39m: [35mGET /api/products/category/babydoll 200 1013ms - IP: ::1[39m
+2025-09-04 19:36:17:3617 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 348ms - IP: ::1[39m
+2025-09-04 22:19:20:1920 [31merror[39m: [31mPOST /api/auth/login 500 10038ms - IP: ::1[39m
+2025-09-04 22:20:15:2015 [35mhttp[39m: [35mGET /api/products/category/babydoll 200 1005ms - IP: ::1[39m
+2025-09-04 22:20:15:2015 [35mhttp[39m: [35mGET /api/products/category/babydoll 304 289ms - IP: ::1[39m
+2025-09-04 22:24:03:243 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 22:30:34:3034 [35mhttp[39m: [35mPOST /api/auth/login 200 491ms - IP: ::1[39m
+2025-09-04 22:30:35:3035 [35mhttp[39m: [35mGET /api/categories 304 117ms - IP: ::1[39m
+2025-09-04 22:30:35:3035 [35mhttp[39m: [35mGET /api/categories 304 103ms - IP: ::1[39m
+2025-09-04 22:30:35:3035 [35mhttp[39m: [35mGET /api/products/featured 304 597ms - IP: ::1[39m
+2025-09-04 22:30:35:3035 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 22:30:36:3036 [35mhttp[39m: [35mGET /api/products 304 935ms - IP: ::1[39m
+2025-09-04 22:30:36:3036 [35mhttp[39m: [35mGET /api/products 304 238ms - IP: ::1[39m
+2025-09-04 22:30:43:3043 [35mhttp[39m: [35mGET /api/categories 304 113ms - IP: ::1[39m
+2025-09-04 22:30:43:3043 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 22:30:43:3043 [35mhttp[39m: [35mGET /api/products 304 451ms - IP: ::1[39m
+2025-09-04 22:30:44:3044 [35mhttp[39m: [35mGET /api/products 304 238ms - IP: ::1[39m
+2025-09-04 22:31:09:319 [35mhttp[39m: [35mPOST /api/upload/product-image 201 6ms - IP: ::1[39m
+2025-09-04 22:34:45:3445 [35mhttp[39m: [35mGET /api/products 304 317ms - IP: ::1[39m
+2025-09-04 22:35:15:3515 [35mhttp[39m: [35mGET /api/categories 304 186ms - IP: ::1[39m
+2025-09-04 22:35:15:3515 [35mhttp[39m: [35mGET /api/categories 304 54ms - IP: ::1[39m
+2025-09-04 22:38:11:3811 [35mhttp[39m: [35mGET /api/categories 304 492ms - IP: ::1[39m
+2025-09-04 22:38:11:3811 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 22:38:13:3813 [35mhttp[39m: [35mGET /api/categories 304 365ms - IP: ::1[39m
+2025-09-04 22:38:13:3813 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 22:38:13:3813 [35mhttp[39m: [35mGET /api/products 304 455ms - IP: ::1[39m
+2025-09-04 22:38:13:3813 [35mhttp[39m: [35mGET /api/products 304 231ms - IP: ::1[39m
+2025-09-04 22:38:15:3815 [35mhttp[39m: [35mGET /api/categories 304 63ms - IP: ::1[39m
+2025-09-04 22:38:15:3815 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 22:48:29:4829 [35mhttp[39m: [35mGET /api/products/featured 304 379ms - IP: ::1[39m
+2025-09-04 22:48:29:4829 [35mhttp[39m: [35mGET /api/categories 304 381ms - IP: ::1[39m
+2025-09-04 22:48:29:4829 [35mhttp[39m: [35mGET /api/products/featured 304 110ms - IP: ::1[39m
+2025-09-04 22:48:29:4829 [35mhttp[39m: [35mGET /api/categories 304 111ms - IP: ::1[39m
+2025-09-04 22:48:29:4829 [35mhttp[39m: [35mGET /api/products 304 738ms - IP: ::1[39m
+2025-09-04 22:48:30:4830 [35mhttp[39m: [35mGET /api/products 304 242ms - IP: ::1[39m
+2025-09-04 22:50:45:5045 [35mhttp[39m: [35mGET /api/products/featured 304 119ms - IP: ::1[39m
+2025-09-04 22:50:45:5045 [35mhttp[39m: [35mGET /api/categories 304 205ms - IP: ::1[39m
+2025-09-04 22:50:45:5045 [35mhttp[39m: [35mGET /api/products/featured 304 85ms - IP: ::1[39m
+2025-09-04 22:50:45:5045 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 22:53:41:5341 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 22:53:41:5341 [33mwarn[39m: [33mGET /api/auth/profile 404 1ms - IP: ::1[39m
+2025-09-04 22:54:12:5412 [35mhttp[39m: [35mGET /api/products/featured 304 905ms - IP: ::1[39m
+2025-09-04 22:54:12:5412 [35mhttp[39m: [35mGET /api/categories 304 907ms - IP: ::1[39m
+2025-09-04 22:54:12:5412 [35mhttp[39m: [35mGET /api/products/featured 304 111ms - IP: ::1[39m
+2025-09-04 22:54:12:5412 [35mhttp[39m: [35mGET /api/categories 304 110ms - IP: ::1[39m
+2025-09-04 22:54:12:5412 [35mhttp[39m: [35mGET /api/products 304 1247ms - IP: ::1[39m
+2025-09-04 22:54:13:5413 [35mhttp[39m: [35mGET /api/products 304 259ms - IP: ::1[39m
+2025-09-04 22:55:19:5519 [35mhttp[39m: [35mGET /api/products/featured 304 143ms - IP: ::1[39m
+2025-09-04 22:55:19:5519 [35mhttp[39m: [35mGET /api/categories 304 200ms - IP: ::1[39m
+2025-09-04 22:55:19:5519 [35mhttp[39m: [35mGET /api/products/featured 304 56ms - IP: ::1[39m
+2025-09-04 22:55:19:5519 [35mhttp[39m: [35mGET /api/categories 304 56ms - IP: ::1[39m
+2025-09-04 22:55:20:5520 [35mhttp[39m: [35mGET /api/products 304 554ms - IP: ::1[39m
+2025-09-04 22:55:20:5520 [35mhttp[39m: [35mGET /api/products 304 237ms - IP: ::1[39m
+2025-09-04 22:55:23:5523 [35mhttp[39m: [35mGET /api/categories 304 80ms - IP: ::1[39m
+2025-09-04 22:55:23:5523 [35mhttp[39m: [35mGET /api/products/featured 304 134ms - IP: ::1[39m
+2025-09-04 22:55:23:5523 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 22:55:23:5523 [35mhttp[39m: [35mGET /api/products/featured 304 58ms - IP: ::1[39m
+2025-09-04 22:55:24:5524 [35mhttp[39m: [35mGET /api/products 304 476ms - IP: ::1[39m
+2025-09-04 22:55:24:5524 [35mhttp[39m: [35mGET /api/products 304 224ms - IP: ::1[39m
+2025-09-04 22:55:32:5532 [35mhttp[39m: [35mGET /api/categories 304 69ms - IP: ::1[39m
+2025-09-04 22:55:32:5532 [35mhttp[39m: [35mGET /api/products/featured 304 68ms - IP: ::1[39m
+2025-09-04 22:55:32:5532 [35mhttp[39m: [35mGET /api/categories 304 57ms - IP: ::1[39m
+2025-09-04 22:55:32:5532 [35mhttp[39m: [35mGET /api/products/featured 304 57ms - IP: ::1[39m
+2025-09-04 22:55:32:5532 [35mhttp[39m: [35mGET /api/products 304 237ms - IP: ::1[39m
+2025-09-04 22:55:33:5533 [35mhttp[39m: [35mGET /api/products 304 244ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/products/featured 304 403ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/categories 304 402ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/categories 304 113ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/products/featured 304 114ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/products 304 721ms - IP: ::1[39m
+2025-09-04 23:03:03:33 [35mhttp[39m: [35mGET /api/products 304 249ms - IP: ::1[39m
+2025-09-04 23:13:58:1358 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/products/featured 304 471ms - IP: ::1[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/products/featured 304 58ms - IP: ::1[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/categories 304 770ms - IP: ::1[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/categories 304 58ms - IP: ::1[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/products 304 1129ms - IP: ::1[39m
+2025-09-04 23:14:20:1420 [35mhttp[39m: [35mGET /api/products 304 229ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/products/featured 304 117ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/categories 304 123ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/products/featured 304 59ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/categories 304 55ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/products 304 485ms - IP: ::1[39m
+2025-09-04 23:14:21:1421 [35mhttp[39m: [35mGET /api/products 304 236ms - IP: ::1[39m
