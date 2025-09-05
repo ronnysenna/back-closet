@@ -14,16 +14,16 @@ router.get("/:slug", productController.getProductBySlug);
 // Rotas protegidas - apenas para administradores
 router.post("/", authenticateToken, isAdmin, productController.createProduct);
 router.put(
-  "/id/:id",
-  authenticateToken,
-  isAdmin,
-  productController.updateProduct
+	"/id/:id",
+	authenticateToken,
+	isAdmin,
+	productController.updateProduct,
 );
 router.delete(
-  "/id/:id",
-  authenticateToken,
-  isAdmin,
-  productController.deleteProduct
+	"/id/:id",
+	authenticateToken,
+	isAdmin,
+	productController.deleteProduct,
 );
 
 export default router;

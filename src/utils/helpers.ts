@@ -4,17 +4,17 @@
  * @returns O slug formatado
  */
 export function createSlug(text: string): string {
-  return text
-    .toString()
-    .normalize("NFD") // normaliza caracteres acentuados
-    .replace(/[\u0300-\u036f]/g, "") // remove acentos
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-") // substitui espaços por hífens
-    .replace(/[^\w\-]+/g, "") // remove todos os caracteres não-palavra
-    .replace(/\-\-+/g, "-") // substitui múltiplos hífens por um único
-    .replace(/^-+/, "") // remove hífens do início
-    .replace(/-+$/, ""); // remove hífens do final
+	return text
+		.toString()
+		.normalize("NFD") // normaliza caracteres acentuados
+		.replace(/[\u0300-\u036f]/g, "") // remove acentos
+		.toLowerCase()
+		.trim()
+		.replace(/\s+/g, "-") // substitui espaços por hífens
+		.replace(/[^\w-]+/g, "") // remove todos os caracteres não-palavra
+		.replace(/--+/g, "-") // substitui múltiplos hífens por um único
+		.replace(/^-+/, "") // remove hífens do início
+		.replace(/-+$/, ""); // remove hífens do final
 }
 
 /**
@@ -23,10 +23,10 @@ export function createSlug(text: string): string {
  * @returns O valor formatado em BRL
  */
 export function formatCurrency(value: number): string {
-  return new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  }).format(value);
+	return new Intl.NumberFormat("pt-BR", {
+		style: "currency",
+		currency: "BRL",
+	}).format(value);
 }
 
 /**
@@ -36,17 +36,17 @@ export function formatCurrency(value: number): string {
  * @returns Código aleatório
  */
 export function generateRandomCode(
-  length: number = 8,
-  prefix: string = ""
+	length: number = 8,
+	prefix: string = "",
 ): string {
-  const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // Removidos caracteres confusos como O, 0, I, 1
-  let result = prefix;
+	const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // Removidos caracteres confusos como O, 0, I, 1
+	let result = prefix;
 
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
+	for (let i = 0; i < length; i++) {
+		result += characters.charAt(Math.floor(Math.random() * characters.length));
+	}
 
-  return result;
+	return result;
 }
 
 /**
@@ -55,10 +55,10 @@ export function generateRandomCode(
  * @returns Objeto analisado ou string original em caso de erro
  */
 export function safeJsonParse(str: string): any {
-  try {
-    return JSON.parse(str);
-  } catch (_e) {
-    // Se não for JSON válido, retorna a string original
-    return str;
-  }
+	try {
+		return JSON.parse(str);
+	} catch (_e) {
+		// Se não for JSON válido, retorna a string original
+		return str;
+	}
 }

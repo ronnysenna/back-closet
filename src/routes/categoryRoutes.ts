@@ -12,16 +12,16 @@ router.get("/:slug", categoryController.getCategoryBySlug);
 // Rotas protegidas - apenas para administradores
 router.post("/", authenticateToken, isAdmin, categoryController.createCategory);
 router.put(
-  "/id/:id",
-  authenticateToken,
-  isAdmin,
-  categoryController.updateCategory
+	"/id/:id",
+	authenticateToken,
+	isAdmin,
+	categoryController.updateCategory,
 );
 router.delete(
-  "/id/:id",
-  authenticateToken,
-  isAdmin,
-  categoryController.deleteCategory
+	"/id/:id",
+	authenticateToken,
+	isAdmin,
+	categoryController.deleteCategory,
 );
 
 export default router;
