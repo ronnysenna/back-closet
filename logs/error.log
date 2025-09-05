@@ -16,3 +16,7 @@
 2025-09-05 13:50:56:5056 [31merror[39m: [31mGET /api/products 500 10015ms - IP: ::1[39m
 2025-09-05 13:52:31:5231 [31merror[39m: [31mGET /api/products 500 10011ms - IP: ::1[39m
 2025-09-05 13:52:31:5231 [31merror[39m: [31mGET /api/categories 500 10017ms - IP: ::1[39m
+2025-09-05 14:44:23:4423 [31merror[39m: [31mGET /api/categories 500 10035ms - IP: ::1[39m
+2025-09-05 14:44:23:4423 [31merror[39m: [31mGET /api/products/featured 500 10038ms - IP: ::1[39m
+2025-09-05 14:44:23:4423 [31merror[39m: [31mGET /api/products 500 10038ms - IP: ::1[39m
+2025-09-05 15:11:35:1135 [31merror[39m: [31mGET /api/products/category/colete 500 10005ms - IP: ::1[39m
