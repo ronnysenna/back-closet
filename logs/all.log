@@ -1605,3 +1605,12 @@
 2025-09-06 11:58:59:5859 [32minfo[39m: [32mServidor inicializado[39m
 2025-09-06 11:59:23:5923 [32minfo[39m: [32mServidor inicializado[39m
 2025-09-06 12:00:42:042 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:06:54:654 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:07:13:713 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:07:25:725 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:07:42:742 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:07:48:748 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:08:12:812 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:08:23:823 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:10:08:108 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-06 12:10:24:1024 [35mhttp[39m: [35mGET /api/health 200 3ms - IP: 1.2.3.4[39m

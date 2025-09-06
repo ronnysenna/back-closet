@@ -1,29 +1,31 @@
-import dotenv from "dotenv";
-import express from "express";
-import cors from "cors";
-import authRoutes from "./routes/authRoutes.js";
-import categoryRoutes from "./routes/categoryRoutes.js";
-import productRoutes from "./routes/productRoutes.js";
-import uploadRoutes from "./routes/uploadRoutes.js";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var dotenv_1 = require("dotenv");
+var express_1 = require("express");
+var cors_1 = require("cors");
+var authRoutes_js_1 = require("./routes/authRoutes.js");
+var categoryRoutes_js_1 = require("./routes/categoryRoutes.js");
+var productRoutes_js_1 = require("./routes/productRoutes.js");
+var uploadRoutes_js_1 = require("./routes/uploadRoutes.js");
 // Configuração de ambiente
-dotenv.config();
-const PORT = process.env.PORT || 3000;
+dotenv_1.default.config();
+var PORT = process.env.PORT || 3000;
 // Inicializar o PrismaClient se necessário em cada controlador
 // Inicialização do Express
-const app = express();
+var app = (0, express_1.default)();
 // Corrigir proxy para produção (NGINX/EasyPanel)
-const trustProxy = process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production";
+var trustProxy = process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production";
 app.set("trust proxy", trustProxy);
 // Configuração de CORS mais robusta
-app.use(cors({
-    origin: (origin, callback) => {
+app.use((0, cors_1.default)({
+    origin: function (origin, callback) {
         // Permite requisições de todos os domínios em desenvolvimento
         if (process.env.NODE_ENV !== "production") {
             callback(null, true);
             return;
         }
         // Domínios permitidos em produção
-        const allowedOrigins = [
+        var allowedOrigins = [
             "https://loja.closetmodafitness.com",
             "http://localhost:5173",
             "http://localhost:3000",
@@ -47,48 +49,47 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
 }));
 // Middleware padrão
-app.use(express.json());
+app.use(express_1.default.json());
 // Reabilitamos o middleware de limitação de taxa após correção
-import { apiLimiter } from "./middleware/rateLimitMiddleware.js";
-app.use("/api", apiLimiter);
+var rateLimitMiddleware_js_1 = require("./middleware/rateLimitMiddleware.js");
+app.use("/api", rateLimitMiddleware_js_1.apiLimiter);
 // Importar middleware de logging avançado
-import { httpLogger } from "./middleware/loggingMiddleware.js";
-import Logger from "./utils/logger.js";
+var loggingMiddleware_js_1 = require("./middleware/loggingMiddleware.js");
+var logger_js_1 = require("./utils/logger.js");
 // Middleware para logging avançado
-app.use(httpLogger);
+app.use(loggingMiddleware_js_1.httpLogger);
 // Log de inicialização do servidor
-Logger.info("Servidor inicializado");
+logger_js_1.default.info("Servidor inicializado");
 // Configurar Swagger para documentação da API
-import { setupSwagger } from "./utils/swagger.js";
-setupSwagger(app);
+var swagger_js_1 = require("./utils/swagger.js");
+(0, swagger_js_1.setupSwagger)(app);
 // Rotas
-app.use("/api/products", productRoutes);
-app.use("/api/categories", categoryRoutes);
-app.use("/api/auth", authRoutes);
-app.use("/api/upload", uploadRoutes);
+app.use("/api/products", productRoutes_js_1.default);
+app.use("/api/categories", categoryRoutes_js_1.default);
+app.use("/api/auth", authRoutes_js_1.default);
+app.use("/api/upload", uploadRoutes_js_1.default);
 // Servir arquivos estáticos da pasta public
-app.use(express.static("public"));
+app.use(express_1.default.static("public"));
 // Rota para verificação de status
-app.get("/api/health", (_req, res) => {
+app.get("/api/health", function (_req, res) {
     res.json({ status: "ok", timestamp: new Date() });
 });
 // Importar middlewares de tratamento de erros
-import { errorHandler, notFoundHandler } from "./middleware/errorMiddleware.js";
+var errorMiddleware_js_1 = require("./middleware/errorMiddleware.js");
 // Middleware para tratamento de rotas não encontradas - deve vir após todas as rotas
-app.use(notFoundHandler);
+app.use(errorMiddleware_js_1.notFoundHandler);
 // Middleware para tratamento de erros - deve ser o último middleware
-app.use(errorHandler);
+app.use(errorMiddleware_js_1.errorHandler);
 // Inicialização do servidor
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+app.listen(PORT, function () {
+    console.log("Servidor rodando na porta ".concat(PORT));
 });
 // Tratamento de erros não capturados
-process.on("unhandledRejection", (reason, promise) => {
+process.on("unhandledRejection", function (reason, promise) {
     console.error("Unhandled Rejection at:", promise, "reason:", reason);
 });
-process.on("uncaughtException", (error) => {
+process.on("uncaughtException", function (error) {
     console.error("Uncaught Exception:", error);
     process.exit(1);
 });
-export default app;
-//# sourceMappingURL=index.js.map
+exports.default = app;

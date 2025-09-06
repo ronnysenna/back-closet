@@ -16,7 +16,7 @@ export const apiLimiter = rateLimit({
     status: 429,
     message: "Muitas requisições, por favor tente novamente mais tarde",
   },
-  // Removido ipRequestCount que estava causando o problema
+  // A biblioteca express-rate-limit usa a configuração 'trust proxy' do Express
 
   // Permitir mais requisições para usuários autenticados
   skip: (req: Request, _res: Response) => {
