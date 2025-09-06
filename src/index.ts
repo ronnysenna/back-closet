@@ -21,7 +21,10 @@ const allowedOrigins = [
 ];
 app.use((req, res, next) => {
   const origin = req.headers.origin as string | undefined;
-  if (origin && allowedOrigins.includes(origin)) {
+  // Permite qualquer origem em desenvolvimento para debug
+  if (process.env.NODE_ENV !== "production") {
+    res.header("Access-Control-Allow-Origin", origin || "*");
+  } else if (origin && allowedOrigins.includes(origin)) {
     res.header("Access-Control-Allow-Origin", origin);
   }
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,PATCH");
