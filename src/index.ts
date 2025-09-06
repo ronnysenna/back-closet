@@ -14,14 +14,21 @@ const PORT = process.env.PORT || 3000;
 // Inicialização do Express
 const app = express();
 
+// Corrigir proxy para produção (NGINX/EasyPanel)
+app.set("trust proxy", 1);
+
 // Middleware
 app.use(
-	cors({
-		origin: ["http://localhost:5173", "http://localhost:3000"],
-		methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-		allowedHeaders: ["Content-Type", "Authorization"],
-		credentials: true,
-	}),
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://loja.closetmodafitness.com",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
 );
 app.use(express.json());
 
@@ -56,7 +63,7 @@ app.use(express.static("public"));
 
 // Rota para verificação de status
 app.get("/api/health", (_req, res) => {
-	res.json({ status: "ok", timestamp: new Date() });
+  res.json({ status: "ok", timestamp: new Date() });
 });
 
 // Importar middlewares de tratamento de erros
@@ -70,17 +77,17 @@ app.use(errorHandler);
 
 // Inicialização do servidor
 app.listen(PORT, () => {
-	console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
 
 // Tratamento de erros não capturados
 process.on("unhandledRejection", (reason, promise) => {
-	console.error("Unhandled Rejection at:", promise, "reason:", reason);
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
 });
 
 process.on("uncaughtException", (error) => {
-	console.error("Uncaught Exception:", error);
-	process.exit(1);
+  console.error("Uncaught Exception:", error);
+  process.exit(1);
 });
 
 export default app;
