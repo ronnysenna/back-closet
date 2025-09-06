@@ -1614,3 +1614,4 @@
 2025-09-06 12:08:23:823 [32minfo[39m: [32mServidor inicializado[39m
 2025-09-06 12:10:08:108 [32minfo[39m: [32mServidor inicializado[39m
 2025-09-06 12:10:24:1024 [35mhttp[39m: [35mGET /api/health 200 3ms - IP: 1.2.3.4[39m
+2025-09-06 12:25:35:2535 [32minfo[39m: [32mServidor inicializado[39m
