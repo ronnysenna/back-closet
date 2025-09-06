@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
@@ -13,31 +14,46 @@ const PORT = process.env.PORT || 3000;
 // Inicialização do Express
 const app = express();
 
-// CORS global (antes de tudo)
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
-  "https://loja.closetmodafitness.com",
-];
-app.use((req, res, next) => {
-  const origin = req.headers.origin as string | undefined;
-  // Permite qualquer origem em desenvolvimento para debug
-  if (process.env.NODE_ENV !== "production") {
-    res.header("Access-Control-Allow-Origin", origin || "*");
-  } else if (origin && allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", origin);
-  }
-  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,PATCH");
-  res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
-  res.header("Access-Control-Allow-Credentials", "true");
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(204);
-  }
-  next();
-});
-
 // Corrigir proxy para produção (NGINX/EasyPanel)
 app.set("trust proxy", 1);
+
+// Configuração de CORS mais robusta
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Permite requisições de todos os domínios em desenvolvimento
+      if (process.env.NODE_ENV !== "production") {
+        callback(null, true);
+        return;
+      }
+
+      // Domínios permitidos em produção
+      const allowedOrigins = [
+        "https://loja.closetmodafitness.com",
+        "http://localhost:5173",
+        "http://localhost:3000",
+      ];
+
+      // Permitir requisições sem origem (ex: aplicações nativas)
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Bloqueado por CORS"));
+      }
+    },
+
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    credentials: true,
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  })
+);
 
 // Middleware padrão
 app.use(express.json());
