@@ -1,15 +1,14 @@
-import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { PrismaClient } from "@prisma/client";
-import productRoutes from "./routes/productRoutes.js";
-import categoryRoutes from "./routes/categoryRoutes.js";
+import express from "express";
 import authRoutes from "./routes/authRoutes.js";
+import categoryRoutes from "./routes/categoryRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 // Configuração de ambiente
 dotenv.config();
 const PORT = process.env.PORT || 3000;
-const prisma = new PrismaClient();
+// Inicializar o PrismaClient se necessário em cada controlador
 // Inicialização do Express
 const app = express();
 // Middleware
@@ -41,7 +40,7 @@ app.use("/api/upload", uploadRoutes);
 // Servir arquivos estáticos da pasta public
 app.use(express.static("public"));
 // Rota para verificação de status
-app.get("/api/health", (req, res) => {
+app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", timestamp: new Date() });
 });
 // Importar middlewares de tratamento de erros

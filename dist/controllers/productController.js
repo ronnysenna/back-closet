@@ -1,7 +1,7 @@
-import prisma from "../utils/prisma.js";
 import { createSlug, safeJsonParse } from "../utils/helpers.js";
+import prisma from "../utils/prisma.js";
 // GET /api/products - Recupera todos os produtos
-export const getProducts = async (req, res) => {
+export const getProducts = async (_req, res) => {
     try {
         const products = await prisma.product.findMany({
             include: {
@@ -50,7 +50,7 @@ export const getProducts = async (req, res) => {
     }
 };
 // GET /api/products/featured - Recupera produtos em destaque
-export const getFeaturedProducts = async (req, res) => {
+export const getFeaturedProducts = async (_req, res) => {
     try {
         const products = await prisma.product.findMany({
             where: {
@@ -104,8 +104,8 @@ export const getFeaturedProducts = async (req, res) => {
 // GET /api/products/id/:id - Recupera um produto pelo ID
 export const getProductById = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
-        if (isNaN(id)) {
+        const id = parseInt(req.params.id, 10);
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         const product = await prisma.product.findUnique({
@@ -248,8 +248,12 @@ export const createProduct = async (req, res) => {
                 stockQuantity: productData.stockQuantity || 0,
                 sku: productData.sku,
                 rating: productData.rating || 5.0,
-                sizes: productData.sizes ? JSON.stringify(productData.sizes) : null,
-                colors: productData.colors ? JSON.stringify(productData.colors) : null,
+                sizes: productData.sizes
+                    ? JSON.stringify(productData.sizes)
+                    : undefined,
+                colors: productData.colors
+                    ? JSON.stringify(productData.colors)
+                    : undefined,
             },
         });
         // Associa categorias se fornecidas
@@ -297,9 +301,9 @@ export const createProduct = async (req, res) => {
 // PUT /api/products/:id - Atualiza um produto
 export const updateProduct = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
+        const id = parseInt(req.params.id, 10);
         const productData = req.body;
-        if (isNaN(id)) {
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         // Verifica se o produto existe
@@ -347,9 +351,13 @@ export const updateProduct = async (req, res) => {
         if (productData.rating !== undefined)
             updateData.rating = productData.rating;
         if (productData.sizes !== undefined)
-            updateData.sizes = JSON.stringify(productData.sizes);
+            updateData.sizes = productData.sizes
+                ? JSON.stringify(productData.sizes)
+                : undefined;
         if (productData.colors !== undefined)
-            updateData.colors = JSON.stringify(productData.colors);
+            updateData.colors = productData.colors
+                ? JSON.stringify(productData.colors)
+                : undefined;
         // Atualiza o produto
         await prisma.product.update({
             where: { id },
@@ -414,8 +422,8 @@ export const updateProduct = async (req, res) => {
 // DELETE /api/products/:id - Remove um produto
 export const deleteProduct = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
-        if (isNaN(id)) {
+        const id = parseInt(req.params.id, 10);
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         // Verifica se o produto existe

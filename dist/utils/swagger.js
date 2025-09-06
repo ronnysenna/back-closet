@@ -1,6 +1,7 @@
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import { version } from "../../package.json";
+import pkg from "../../package.json" with { type: "json" };
+const version = pkg.version;
 // Opções básicas do Swagger
 const options = {
     definition: {
@@ -55,7 +56,7 @@ export function setupSwagger(app) {
         customSiteTitle: "API Closet Moda Fitness - Documentação",
     }));
     // Endpoint para buscar o JSON com as especificações do Swagger
-    app.get("/api-docs.json", (req, res) => {
+    app.get("/api-docs.json", (_req, res) => {
         res.setHeader("Content-Type", "application/json");
         res.send(swaggerSpec);
     });

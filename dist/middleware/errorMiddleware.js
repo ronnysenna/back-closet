@@ -8,7 +8,7 @@ export class AppError extends Error {
     }
 }
 // Middleware para tratamento de erros
-export const errorHandler = (err, req, res, next) => {
+export const errorHandler = (err, _req, res, _next) => {
     console.error(err);
     // Erro personalizado da aplicação
     if (err instanceof AppError) {

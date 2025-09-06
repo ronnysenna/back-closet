@@ -16,7 +16,7 @@ export const apiLimiter = rateLimit({
     // Configuração segura para qualquer tipo de IP (IPv4 ou IPv6)
     ipRequestCount: true,
     // Permitir mais requisições para usuários autenticados
-    skip: (req, res) => {
+    skip: (req, _res) => {
         // Se o usuário estiver autenticado e for um administrador, não aplica limite
         if (req.user && req.user.role === "ADMIN") {
             return true;

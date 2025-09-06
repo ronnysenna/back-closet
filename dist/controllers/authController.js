@@ -1,7 +1,7 @@
-import prisma from "../utils/prisma.js";
-import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import jwt from "jsonwebtoken";
+import prisma from "../utils/prisma.js";
 dotenv.config();
 // Login de usuário
 export const login = async (req, res) => {

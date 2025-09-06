@@ -1,7 +1,7 @@
-import prisma from "../utils/prisma.js";
 import { createSlug } from "../utils/helpers.js";
+import prisma from "../utils/prisma.js";
 // GET /api/categories - Recupera todas as categorias
-export const getCategories = async (req, res) => {
+export const getCategories = async (_req, res) => {
     try {
         const categories = await prisma.category.findMany({
             orderBy: { name: "asc" },
@@ -16,8 +16,8 @@ export const getCategories = async (req, res) => {
 // GET /api/categories/:id - Recupera uma categoria pelo ID
 export const getCategoryById = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
-        if (isNaN(id)) {
+        const id = parseInt(req.params.id, 10);
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         const category = await prisma.category.findUnique({
@@ -91,9 +91,9 @@ export const createCategory = async (req, res) => {
 // PUT /api/categories/:id - Atualiza uma categoria
 export const updateCategory = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
+        const id = parseInt(req.params.id, 10);
         const { name, description } = req.body;
-        if (isNaN(id)) {
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         // Verifica se a categoria existe
@@ -144,8 +144,8 @@ export const updateCategory = async (req, res) => {
 // DELETE /api/categories/:id - Remove uma categoria
 export const deleteCategory = async (req, res) => {
     try {
-        const id = parseInt(req.params.id);
-        if (isNaN(id)) {
+        const id = parseInt(req.params.id, 10);
+        if (Number.isNaN(id)) {
             return res.status(400).json({ message: "ID inválido" });
         }
         // Verifica se a categoria existe

@@ -11,8 +11,8 @@ export function createSlug(text) {
         .toLowerCase()
         .trim()
         .replace(/\s+/g, "-") // substitui espaços por hífens
-        .replace(/[^\w\-]+/g, "") // remove todos os caracteres não-palavra
-        .replace(/\-\-+/g, "-") // substitui múltiplos hífens por um único
+        .replace(/[^\w-]+/g, "") // remove todos os caracteres não-palavra
+        .replace(/--+/g, "-") // substitui múltiplos hífens por um único
         .replace(/^-+/, "") // remove hífens do início
         .replace(/-+$/, ""); // remove hífens do final
 }

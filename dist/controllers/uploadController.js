@@ -1,9 +1,9 @@
+import fs from "node:fs";
+import path from "node:path";
 import multer from "multer";
-import path from "path";
-import fs from "fs";
 // Configuração do armazenamento para o Multer
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
+    destination: (_req, _file, cb) => {
         const uploadPath = path.join(process.cwd(), "public", "image", "uploads");
         // Garante que o diretório existe
         if (!fs.existsSync(uploadPath)) {
@@ -11,15 +11,15 @@ const storage = multer.diskStorage({
         }
         cb(null, uploadPath);
     },
-    filename: (req, file, cb) => {
+    filename: (_req, file, cb) => {
         // Gerar um nome de arquivo único baseado na data + nome original
-        const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+        const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
         const extension = path.extname(file.originalname);
         cb(null, `product-${uniqueSuffix}${extension}`);
     },
 });
 // Filtro de arquivos para aceitar apenas imagens
-const fileFilter = (req, file, cb) => {
+const fileFilter = (_req, file, cb) => {
     const allowedTypes = [
         "image/jpeg",
         "image/jpg",
@@ -52,10 +52,10 @@ export const uploadProductImage = (req, res) => {
         }
         // Construir o caminho relativo para a imagem
         const relativeFilePath = `image/uploads/${file.filename}`;
-        // Responder com o caminho da imagem
+        // Responder com o caminho da imagem (incluindo a barra inicial)
         res.status(201).json({
             message: "Upload realizado com sucesso",
-            imageUrl: relativeFilePath,
+            imageUrl: `/${relativeFilePath}`,
             originalName: file.originalname,
             size: file.size,
         });

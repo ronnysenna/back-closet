@@ -1,11 +1,11 @@
-import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import jwt from "jsonwebtoken";
 dotenv.config();
 // Middleware para verificar se o token JWT é válido
 export const authenticateToken = (req, res, next) => {
     try {
-        const authHeader = req.headers["authorization"];
-        const token = authHeader && authHeader.split(" ")[1]; // Bearer TOKEN
+        const authHeader = req.headers.authorization;
+        const token = authHeader?.split(" ")[1]; // Bearer TOKEN
         if (!token) {
             return res
                 .status(401)
@@ -39,9 +39,7 @@ export const isAdmin = (req, res, next) => {
         return res.status(401).json({ message: "Usuário não autenticado" });
     }
     if (req.user.role !== "ADMIN") {
-        return res
-            .status(403)
-            .json({
+        return res.status(403).json({
             message: "Acesso não autorizado. Requer privilégios de administrador",
         });
     }

@@ -7,9 +7,9 @@
  * Para executar:
  * npm run build && node dist/scripts/migrateData.js
  */
-import mysql from "mysql2/promise";
 import { PrismaClient } from "@prisma/client";
 import dotenv from "dotenv";
+import mysql from "mysql2/promise";
 import { createSlug } from "../utils/helpers.js";
 // Carrega as variáveis de ambiente
 dotenv.config();

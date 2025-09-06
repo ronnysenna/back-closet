@@ -1,7 +1,8 @@
 import type { Express } from "express";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import { version } from "../../package.json";
+import pkg from "../../package.json" with { type: "json" };
+const version = pkg.version;
 
 // Opções básicas do Swagger
 const options: swaggerJsdoc.Options = {
