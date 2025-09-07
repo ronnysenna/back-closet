@@ -82,10 +82,10 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
-// Registrar um novo usuário (apenas para admins)
+// Registrar um novo usuário
 export const register = async (req: Request, res: Response) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password, phone, role } = req.body;
 
     // Verifica se já existe um usuário com este email
     const existingUser = await prisma.user.findUnique({
@@ -107,6 +107,7 @@ export const register = async (req: Request, res: Response) => {
       data: {
         name,
         email,
+        phone,
         password: hashedPassword,
         role: role || "USER",
       },
@@ -118,6 +119,7 @@ export const register = async (req: Request, res: Response) => {
         id: newUser.id,
         name: newUser.name,
         email: newUser.email,
+        phone: newUser.phone,
         role: newUser.role,
       },
     });

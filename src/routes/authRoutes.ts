@@ -12,7 +12,7 @@ router.get("/verify", authenticateToken, authController.verifyToken);
 router.get("/profile", authenticateToken, authController.getProfile);
 router.put("/profile", authenticateToken, authController.updateProfile);
 
-// Rotas de administrador
-router.post("/register", authenticateToken, isAdmin, authController.register);
+// Rota pública de registro
+router.post("/register", authController.register);
 
 export default router;

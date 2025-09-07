@@ -73,6 +73,7 @@ model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
   name      String
+  phone     String?
   password  String
   role      String   @default("USER")
   createdAt DateTime @default(now()) @map("created_at")
