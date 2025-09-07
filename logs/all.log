@@ -3353,3 +3353,32 @@
 2025-09-07 15:59:55:5955 [35mhttp[39m: [35mGET /image/uploads/product-1757084545611-172431795.jpeg 304 1ms - IP: ::1[39m
 2025-09-07 15:59:55:5955 [35mhttp[39m: [35mGET /image/uploads/product-1757085109280-240793901.jpeg 304 0ms - IP: ::1[39m
 2025-09-07 15:59:55:5955 [35mhttp[39m: [35mGET /api/products 304 252ms - IP: ::1[39m
+2025-09-07 16:07:58:758 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:08:09:89 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:08:17:817 [35mhttp[39m: [35mGET /api/orders/my-orders 304 502ms - IP: ::1[39m
+2025-09-07 16:08:17:817 [35mhttp[39m: [35mGET /api/orders/my-orders 304 111ms - IP: ::1[39m
+2025-09-07 16:08:21:821 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:08:32:832 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:08:40:840 [35mhttp[39m: [35mPOST /api/auth/login 200 425ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /api/categories 304 342ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /api/categories 304 54ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /api/products 304 460ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757084716272-513608421.jpeg 304 2ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757084379833-431851289.jpeg 304 1ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757084210347-170101453.jpeg 304 0ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757083680735-376806545.jpeg 304 0ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757085109280-240793901.jpeg 304 1ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757097247835-530706845.jpeg 304 2ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /image/uploads/product-1757084545611-172431795.jpeg 304 2ms - IP: ::1[39m
+2025-09-07 16:08:41:841 [35mhttp[39m: [35mGET /api/products 304 243ms - IP: ::1[39m
+2025-09-07 16:08:46:846 [35mhttp[39m: [35mGET /api/dashboard/stats 200 909ms - IP: ::1[39m
+2025-09-07 16:08:47:847 [35mhttp[39m: [35mGET /api/dashboard/stats 304 463ms - IP: ::1[39m
+2025-09-07 16:09:15:915 [35mhttp[39m: [35mGET /api/orders 200 399ms - IP: ::1[39m
+2025-09-07 16:09:15:915 [35mhttp[39m: [35mGET /api/orders 304 180ms - IP: ::1[39m
+2025-09-07 16:09:27:927 [35mhttp[39m: [35mPUT /api/orders/12/status 200 273ms - IP: ::1[39m
+2025-09-07 16:09:27:927 [35mhttp[39m: [35mGET /api/orders 200 175ms - IP: ::1[39m
+2025-09-07 16:09:31:931 [35mhttp[39m: [35mGET /api/dashboard/stats 200 503ms - IP: ::1[39m
+2025-09-07 16:09:31:931 [35mhttp[39m: [35mGET /api/dashboard/stats 304 477ms - IP: ::1[39m
+2025-09-07 16:09:45:945 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:11:53:1153 [32minfo[39m: [32mServidor inicializado[39m
+2025-09-07 16:12:02:122 [32minfo[39m: [32mServidor inicializado[39m

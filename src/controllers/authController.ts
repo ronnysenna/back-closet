@@ -85,6 +85,9 @@ export const login = async (req: Request, res: Response) => {
 // Registrar um novo usuário
 export const register = async (req: Request, res: Response) => {
   try {
+    console.log(
+      `Tentativa de registro recebida: ${JSON.stringify(req.body, null, 2)}`
+    );
     const { name, email, password, phone, role } = req.body;
 
     // Verifica se já existe um usuário com este email
@@ -93,6 +96,7 @@ export const register = async (req: Request, res: Response) => {
     });
 
     if (existingUser) {
+      console.log(`Registro falhou: Email ${email} já está em uso`);
       return res
         .status(400)
         .json({ message: "Este email já está sendo utilizado" });
@@ -113,6 +117,10 @@ export const register = async (req: Request, res: Response) => {
       },
     });
 
+    console.log(
+      `Usuário criado com sucesso: ${newUser.id}, ${newUser.name}, ${newUser.email}`
+    );
+
     res.status(201).json({
       message: "Usuário criado com sucesso",
       user: {
@@ -125,6 +133,13 @@ export const register = async (req: Request, res: Response) => {
     });
   } catch (error) {
     console.error("Erro ao registrar usuário:", error);
+
+    // Log detalhado do erro para melhor depuração
+    if (error instanceof Error) {
+      console.error(`Detalhes do erro de registro: ${error.message}`);
+      console.error(`Stack trace: ${error.stack}`);
+    }
+
     res.status(500).json({ message: "Erro interno no servidor" });
   }
 };

@@ -1,5 +1,4 @@
-import prismaImport from "../utils/prisma.js";
-const prisma = prismaImport.default || prismaImport;
+import prisma from "../utils/prisma.js";
 async function cleanTestOrders() {
     // Buscar IDs de usuários de teste
     const testUsers = await prisma.user.findMany({

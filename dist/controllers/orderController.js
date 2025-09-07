@@ -201,13 +201,7 @@ export const updateOrderStatus = async (req, res) => {
                 .json({ message: "ID inválido: deve ser um número" });
         }
         // Validar os status permitidos
-        const validStatus = [
-            "Em processamento",
-            "Pago",
-            "Em entrega",
-            "Entregue",
-            "Cancelado",
-        ];
+        const validStatus = ["Em processamento", "Pago", "Cancelado"];
         if (!validStatus.includes(status)) {
             return res.status(400).json({
                 message: "Status inválido",

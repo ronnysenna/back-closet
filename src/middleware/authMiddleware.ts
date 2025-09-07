@@ -31,6 +31,13 @@ export const authenticateToken = (
   next: NextFunction
 ) => {
   try {
+    // Verifica se a rota é de registro ou login para ignorar a verificação
+    const path = req.path;
+    if (path.includes("/register") || path.includes("/login")) {
+      console.log(`Ignorando verificação de token para rota pública: ${path}`);
+      return next();
+    }
+
     const authHeader = req.headers.authorization;
     const token = authHeader?.split(" ")[1]; // Bearer TOKEN
 

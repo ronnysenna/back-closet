@@ -12,7 +12,7 @@ router.get("/verify", authenticateToken, authController.verifyToken);
 router.get("/profile", authenticateToken, authController.getProfile);
 router.put("/profile", authenticateToken, authController.updateProfile);
 
-// Rota pública de registro
+// Rota pública de registro (garantir que seja pública sem middleware de autenticação)
 router.post("/register", authController.register);
 
 export default router;

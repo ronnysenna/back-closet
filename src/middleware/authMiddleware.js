@@ -1,30 +1,33 @@
-import dotenv from "dotenv";
-import jwt from "jsonwebtoken";
-dotenv.config();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isAdmin = exports.authenticateToken = void 0;
+var dotenv_1 = require("dotenv");
+var jsonwebtoken_1 = require("jsonwebtoken");
+dotenv_1.default.config();
 // Middleware para verificar se o token JWT é válido
-export const authenticateToken = (req, res, next) => {
+var authenticateToken = function (req, res, next) {
     try {
         // Verifica se a rota é de registro ou login para ignorar a verificação
-        const path = req.path;
+        var path = req.path;
         if (path.includes("/register") || path.includes("/login")) {
-            console.log(`Ignorando verificação de token para rota pública: ${path}`);
+            console.log("Ignorando verifica\u00E7\u00E3o de token para rota p\u00FAblica: ".concat(path));
             return next();
         }
-        const authHeader = req.headers.authorization;
-        const token = authHeader?.split(" ")[1]; // Bearer TOKEN
+        var authHeader = req.headers.authorization;
+        var token = authHeader === null || authHeader === void 0 ? void 0 : authHeader.split(" ")[1]; // Bearer TOKEN
         if (!token) {
             return res
                 .status(401)
                 .json({ message: "Token de autenticação não fornecido" });
         }
-        const secretKey = process.env.JWT_SECRET;
+        var secretKey = process.env.JWT_SECRET;
         if (!secretKey) {
             console.error("JWT_SECRET não está definido no arquivo .env");
             return res
                 .status(500)
                 .json({ message: "Erro de configuração no servidor" });
         }
-        jwt.verify(token, secretKey, (err, decoded) => {
+        jsonwebtoken_1.default.verify(token, secretKey, function (err, decoded) {
             if (err) {
                 console.error("Erro ao verificar token:", err.message);
                 return res.status(403).json({ message: "Token inválido ou expirado" });
@@ -39,8 +42,9 @@ export const authenticateToken = (req, res, next) => {
         res.status(500).json({ message: "Erro interno no servidor" });
     }
 };
+exports.authenticateToken = authenticateToken;
 // Middleware para verificar se o usuário é administrador
-export const isAdmin = (req, res, next) => {
+var isAdmin = function (req, res, next) {
     if (!req.user) {
         return res.status(401).json({ message: "Usuário não autenticado" });
     }
@@ -51,4 +55,4 @@ export const isAdmin = (req, res, next) => {
     }
     next();
 };
-//# sourceMappingURL=authMiddleware.js.map
+exports.isAdmin = isAdmin;

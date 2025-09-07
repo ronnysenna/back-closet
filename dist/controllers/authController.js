@@ -64,15 +64,17 @@ export const login = async (req, res) => {
         res.status(500).json({ message: "Erro interno no servidor" });
     }
 };
-// Registrar um novo usuário (apenas para admins)
+// Registrar um novo usuário
 export const register = async (req, res) => {
     try {
-        const { name, email, password, role } = req.body;
+        console.log(`Tentativa de registro recebida: ${JSON.stringify(req.body, null, 2)}`);
+        const { name, email, password, phone, role } = req.body;
         // Verifica se já existe um usuário com este email
         const existingUser = await prisma.user.findUnique({
             where: { email },
         });
         if (existingUser) {
+            console.log(`Registro falhou: Email ${email} já está em uso`);
             return res
                 .status(400)
                 .json({ message: "Este email já está sendo utilizado" });
@@ -85,22 +87,30 @@ export const register = async (req, res) => {
             data: {
                 name,
                 email,
+                phone,
                 password: hashedPassword,
                 role: role || "USER",
             },
         });
+        console.log(`Usuário criado com sucesso: ${newUser.id}, ${newUser.name}, ${newUser.email}`);
         res.status(201).json({
             message: "Usuário criado com sucesso",
             user: {
                 id: newUser.id,
                 name: newUser.name,
                 email: newUser.email,
+                phone: newUser.phone,
                 role: newUser.role,
             },
         });
     }
     catch (error) {
         console.error("Erro ao registrar usuário:", error);
+        // Log detalhado do erro para melhor depuração
+        if (error instanceof Error) {
+            console.error(`Detalhes do erro de registro: ${error.message}`);
+            console.error(`Stack trace: ${error.stack}`);
+        }
         res.status(500).json({ message: "Erro interno no servidor" });
     }
 };
