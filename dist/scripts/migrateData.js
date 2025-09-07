@@ -4,7 +4,17 @@
  * Este script conecta-se ao banco de dados MySQL existente,
  * extrai os dados e os insere no novo banco PostgreSQL usando Prisma.
  *
- * Para executar:
+ * Paraasync function migrateData() {
+    console.log("Iniciando migração de dados do MySQL para PostgreSQL...");
+
+    // @ts-ignore - Ignorando erro de tipagem para o contexto de migração
+    let mysqlConn = null;
+
+    try {
+        // Conecta ao banco de dados MySQL
+        console.log("Conectando ao MySQL...");
+        // @ts-ignore - Ignorando erro de tipagem para o contexto de migração
+        mysqlConn = await mysql.createConnection(mysqlConfig);:
  * npm run build && node dist/scripts/migrateData.js
  */
 import { PrismaClient } from "@prisma/client";
@@ -198,6 +208,7 @@ async function migrateData() {
     }
     finally {
         // Fecha as conexões
+        // @ts-ignore - Ignorando erro de tipagem para o contexto de migração
         if (mysqlConn)
             await mysqlConn.end();
         await prisma.$disconnect();

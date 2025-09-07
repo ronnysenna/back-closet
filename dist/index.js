@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 // Configuração de ambiente
@@ -48,9 +50,8 @@ app.use(cors({
 }));
 // Middleware padrão
 app.use(express.json());
-// Reabilitamos o middleware de limitação de taxa após correção
-import { apiLimiter } from "./middleware/rateLimitMiddleware.js";
-app.use("/api", apiLimiter);
+// Desativar rate limiter temporariamente para depurar problemas de autenticação
+// app.use("/api", apiLimiter);
 // Importar middleware de logging avançado
 import { httpLogger } from "./middleware/loggingMiddleware.js";
 import Logger from "./utils/logger.js";
@@ -66,6 +67,8 @@ app.use("/api/products", productRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/orders", orderRoutes);
 // Servir arquivos estáticos da pasta public
 app.use(express.static("public"));
 // Rota para verificação de status

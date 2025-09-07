@@ -20,3 +20,13 @@
 2025-09-05 14:44:23:4423 [31merror[39m: [31mGET /api/products/featured 500 10038ms - IP: ::1[39m
 2025-09-05 14:44:23:4423 [31merror[39m: [31mGET /api/products 500 10038ms - IP: ::1[39m
 2025-09-05 15:11:35:1135 [31merror[39m: [31mGET /api/products/category/colete 500 10005ms - IP: ::1[39m
+2025-09-07 11:00:48:048 [31merror[39m: [31mGET /api/dashboard/stats 500 774ms - IP: ::1[39m
+2025-09-07 11:00:48:048 [31merror[39m: [31mGET /api/dashboard/stats 500 189ms - IP: ::1[39m
+2025-09-07 11:02:25:225 [31merror[39m: [31mGET /api/dashboard/stats 500 183ms - IP: ::1[39m
+2025-09-07 11:02:25:225 [31merror[39m: [31mGET /api/dashboard/stats 500 191ms - IP: ::1[39m
+2025-09-07 11:02:25:225 [31merror[39m: [31mGET /api/dashboard/stats 500 192ms - IP: ::1[39m
+2025-09-07 11:02:25:225 [31merror[39m: [31mGET /api/dashboard/stats 500 168ms - IP: ::1[39m
+2025-09-07 11:02:35:235 [31merror[39m: [31mGET /api/dashboard/stats 500 176ms - IP: ::1[39m
+2025-09-07 11:02:35:235 [31merror[39m: [31mGET /api/dashboard/stats 500 167ms - IP: ::1[39m
+2025-09-07 11:02:36:236 [31merror[39m: [31mGET /api/dashboard/stats 500 170ms - IP: ::1[39m
+2025-09-07 11:02:36:236 [31merror[39m: [31mGET /api/dashboard/stats 500 181ms - IP: ::1[39m

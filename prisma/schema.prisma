@@ -77,6 +77,45 @@ model User {
   role      String   @default("USER")
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
+  orders    Order[]
 
   @@map("users")
+}
+
+// Modelo para implementação futura
+model Order {
+  id              Int       @id @default(autoincrement())
+  orderNumber     String?   @unique @map("order_number")
+  userId          Int       @map("user_id")
+  total           Decimal   @db.Decimal(10, 2)
+  status          String    @default("Em processamento") // "Em processamento", "Pago", "Em entrega", "Entregue", "Cancelado"
+  paymentMethod   String    @map("payment_method")
+  paymentId       String?   @map("payment_id")
+  shippingAddress String    @map("shipping_address")
+  shippingMethod  String    @map("shipping_method")
+  shippingCost    Decimal   @map("shipping_cost") @db.Decimal(10, 2)
+  trackingNumber  String?   @map("tracking_number")
+  notes           String?   @db.Text
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  completedAt     DateTime? @map("completed_at")
+
+  user  User        @relation(fields: [userId], references: [id])
+  items OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int     @map("order_id")
+  productId Int     @map("product_id")
+  quantity  Int
+  price     Decimal @db.Decimal(10, 2)
+  name      String
+  sku       String?
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_items")
 }
