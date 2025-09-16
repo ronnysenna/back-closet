@@ -475,9 +475,18 @@ export const updateProduct = async (req: Request, res: Response) => {
       },
     });
 
+    if (!updatedProduct) {
+      return res
+        .status(404)
+        .json({ message: "Produto não encontrado após atualização" });
+    }
     res.json({
       message: "Produto atualizado com sucesso",
-      product: updatedProduct,
+      product: {
+        ...updatedProduct,
+        stockQuantity: updatedProduct.stockQuantity,
+        stock_quantity: updatedProduct.stockQuantity,
+      },
     });
   } catch (error) {
     console.error("Erro ao atualizar produto:", error);
@@ -582,5 +591,59 @@ export const getProductsByCategory = async (req: Request, res: Response) => {
   } catch (error) {
     console.error(`Erro ao buscar produtos por categoria:`, error);
     res.status(500).json({ message: "Erro ao buscar produtos por categoria" });
+  }
+};
+
+// POST /api/products/:id/favorite - Adiciona ou remove produto dos favoritos do usuário
+export const toggleFavoriteProduct = async (req: Request, res: Response) => {
+  try {
+    const userId = req.user?.id;
+    const productId = parseInt(req.params.id, 10);
+    if (!userId) {
+      return res.status(401).json({ message: "Usuário não autenticado" });
+    }
+    if (Number.isNaN(productId)) {
+      return res.status(400).json({ message: "ID de produto inválido" });
+    }
+    // Busca usuário
+    const user = await prisma.user.findUnique({ where: { id: userId } });
+    if (!user) {
+      return res.status(404).json({ message: "Usuário não encontrado" });
+    }
+    // Inicializa favoritos se não existir
+    let favorites: number[] = Array.isArray(user.favorites)
+      ? user.favorites
+      : [];
+    // Alterna favorito
+    if (favorites.includes(productId)) {
+      favorites = favorites.filter((id) => id !== productId);
+    } else {
+      favorites.push(productId);
+    }
+    // Atualiza usuário
+    await prisma.user.update({
+      where: { id: userId },
+      data: { favorites },
+    });
+
+    // Busca o usuário atualizado para retornar dados públicos
+    const updatedUser = await prisma.user.findUnique({ where: { id: userId } });
+    const publicUser = updatedUser
+      ? {
+          id: updatedUser.id,
+          name: updatedUser.name,
+          email: updatedUser.email,
+          role: updatedUser.role,
+          createdAt: updatedUser.createdAt,
+          favorites: Array.isArray(updatedUser.favorites)
+            ? updatedUser.favorites
+            : [],
+        }
+      : null;
+
+    res.json({ message: "Favoritos atualizados", favorites, user: publicUser });
+  } catch (error) {
+    console.error("Erro ao favoritar produto:", error);
+    res.status(500).json({ message: "Erro ao favoritar produto" });
   }
 };

@@ -71,6 +71,9 @@ export const createOrder = async (req: Request, res: Response) => {
         });
       }
 
+      // NÃO FAZER BAIXA DE ESTOQUE AQUI!
+      // A baixa de estoque será feita apenas quando o status for alterado para 'Pago'.
+
       return newOrder;
     });
 
@@ -249,6 +252,9 @@ export const updateOrderStatus = async (req: Request, res: Response) => {
       where: {
         id: parseInt(id),
       },
+      include: {
+        items: true,
+      },
     });
 
     if (!existingOrder) {
@@ -269,9 +275,22 @@ export const updateOrderStatus = async (req: Request, res: Response) => {
       updateData.paymentId = paymentId;
     }
 
-    // Se o status for "Pago", adicionar data de finalização
+    // Se o status for "Pago" e ainda não estava pago, baixa o estoque
     if (status === "Pago" && existingOrder.status !== "Pago") {
       updateData.completedAt = new Date();
+      // Baixa o estoque dos produtos do pedido
+      await Promise.all(
+        existingOrder.items.map(async (item) => {
+          await prisma.product.update({
+            where: { id: item.productId },
+            data: {
+              stockQuantity: {
+                decrement: item.quantity,
+              },
+            },
+          });
+        })
+      );
     }
 
     // Se o status for "Cancelado", definir completedAt como null

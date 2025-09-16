@@ -11,19 +11,26 @@ router.get("/category/:slug", productController.getProductsByCategory);
 router.get("/id/:id", productController.getProductById);
 router.get("/:slug", productController.getProductBySlug);
 
+// Rota para favoritar/ desfavoritar produto (usuário autenticado)
+router.post(
+  "/:id/favorite",
+  authenticateToken,
+  productController.toggleFavoriteProduct
+);
+
 // Rotas protegidas - apenas para administradores
 router.post("/", authenticateToken, isAdmin, productController.createProduct);
 router.put(
-	"/id/:id",
-	authenticateToken,
-	isAdmin,
-	productController.updateProduct,
+  "/id/:id",
+  authenticateToken,
+  isAdmin,
+  productController.updateProduct
 );
 router.delete(
-	"/id/:id",
-	authenticateToken,
-	isAdmin,
-	productController.deleteProduct,
+  "/id/:id",
+  authenticateToken,
+  isAdmin,
+  productController.deleteProduct
 );
 
 export default router;

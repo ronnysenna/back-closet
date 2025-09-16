@@ -67,6 +67,8 @@ export const login = async (req: Request, res: Response) => {
         name: user.name,
         email: user.email,
         role: user.role,
+        // Inclui favorites para que o frontend saiba os itens já favoritados após o login
+        favorites: Array.isArray(user.favorites) ? user.favorites : [],
       },
     });
   } catch (error) {
@@ -237,6 +239,10 @@ export const updateProfile = async (req: Request, res: Response) => {
         email: updatedUser.email,
         role: updatedUser.role,
         createdAt: updatedUser.createdAt,
+        // Inclui favoritos para que o frontend mantenha o estado correto
+        favorites: Array.isArray(updatedUser.favorites)
+          ? updatedUser.favorites
+          : [],
       },
     });
   } catch (error) {
@@ -271,6 +277,8 @@ export const getProfile = async (req: Request, res: Response) => {
       email: user.email,
       role: user.role,
       createdAt: user.createdAt,
+      // Inclui favoritos no perfil retornado
+      favorites: Array.isArray(user.favorites) ? user.favorites : [],
     });
   } catch (error) {
     console.error("Erro ao obter perfil:", error);
